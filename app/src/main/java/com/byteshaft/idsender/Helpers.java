@@ -45,7 +45,7 @@ public class Helpers {
             }
         }
 
-        return messageText;
+        return messageText + " from " + originatingAddress;
     }
 
     public static TelephonyManager getTelephonyManager() {

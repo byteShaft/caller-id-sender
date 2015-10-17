@@ -17,15 +17,16 @@
         android:layout_height="wrap_content"
         android:inputType="text"
         android:layout_marginBottom="10dp"
-        android:hint="Enter a command here" />
+        android:hint="Enter message" />
 
-    <EditText
-        android:id="@+id/port_number_entry"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:inputType="number"
-        android:text="6742" />
+    <!--<EditText-->
+        <!--android:id="@+id/port_number_entry"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginBottom="10dp"-->
+        <!--android:visibility="gone"-->
+        <!--android:inputType="number"-->
+        <!--android:text="6742" />-->
 
     <EditText
         android:id="@+id/outgoing_number_entry"
@@ -33,13 +34,13 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:inputType="number"
-        android:hint="Enter receipt address" />
+        android:hint="Enter phone number" />
 
     <Button
         android:id="@+id/button_send"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Send command"
+        android:text="Send"
         android:layout_gravity="right" />
 
 </LinearLayout>

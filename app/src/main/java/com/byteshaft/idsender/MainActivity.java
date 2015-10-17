@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private EditText mPortNumberEntry;
+//    private EditText mPortNumberEntry;
     private EditText mReceiptEntry;
     private EditText mDataSmsTextEntry;
     private Helpers mHelpers;
@@ -20,19 +20,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         mHelpers = new Helpers();
-        mPortNumberEntry = (EditText) findViewById(R.id.port_number_entry);
+//        mPortNumberEntry = (EditText) findViewById(R.id.port_number_entry);
         mReceiptEntry = (EditText) findViewById(R.id.outgoing_number_entry);
         mDataSmsTextEntry = (EditText) findViewById(R.id.sms_text_entry);
         Button sendButton = (Button) findViewById(R.id.button_send);
         sendButton.setOnClickListener(this);
+
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.button_send:
-                if (mHelpers.isInputBoxEmpty(mPortNumberEntry) ||
-                        mHelpers.isInputBoxEmpty(mDataSmsTextEntry) ||
+                if (mHelpers.isInputBoxEmpty(mDataSmsTextEntry) ||
                         mHelpers.isInputBoxEmpty(mReceiptEntry)) {
                     mHelpers.makeLongToast(
                             getApplicationContext(),
@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 mHelpers.sendDataSms(
                         mHelpers.getInputBoxTextAsString(mReceiptEntry),
-                        mHelpers.getInputBoxTextAsString(mPortNumberEntry),
+                        "6742",
                         mHelpers.getInputBoxTextAsString(mDataSmsTextEntry)
                 );
                 Toast.makeText(

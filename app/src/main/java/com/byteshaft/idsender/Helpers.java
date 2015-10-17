@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.telephony.SmsManager;
-import android.telephony.TelephonyManager;
 import android.telephony.SmsMessage;
 import android.text.TextUtils;
 import android.util.Log;
@@ -45,11 +44,7 @@ public class Helpers {
             }
         }
 
-        return messageText;
-    }
-
-    public static TelephonyManager getTelephonyManager() {
-        return (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
+        return messageText + " from " + originatingAddress;
     }
 
     private SmsManager getSmsManager() {
